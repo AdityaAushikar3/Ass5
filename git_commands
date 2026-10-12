@@ -1,0 +1,74 @@
+# Git Commands – One-Page Theory Notes
+
+## 1. What is Git?
+
+Git is a distributed version control system used to track changes in source code, manage project versions, and collaborate with other developers.
+
+Git vs GitHub: Git is a version control tool; GitHub is an online platform for hosting Git repositories.
+
+## 2. Important Git Commands
+
+| Command                                  | Theory / Purpose                                                           |
+| ---------------------------------------- | -------------------------------------------------------------------------- |
+| `git --version`                          | Checks the installed Git version.                                          |
+| `git config --global user.name "Name"`   | Sets the global username.                                                  |
+| `git config --global user.email "email"` | Sets the global email address.                                             |
+| `git init`                               | Initializes a new Git repository.                                          |
+| `git clone URL`                          | Copies an existing remote repository to the local system.                  |
+| `git status`                             | Shows the current state of files.                                          |
+| `git add filename`                       | Adds a specific file to the staging area.                                  |
+| `git add .`                              | Stages all changes in the current directory.                               |
+| `git commit -m "message"`                | Saves staged changes as a commit.                                          |
+| `git log`                                | Displays commit history.                                                   |
+| `git diff`                               | Shows changes that have not been staged.                                   |
+| `git branch`                             | Lists local branches.                                                      |
+| `git branch branch-name`                 | Creates a new branch.                                                      |
+| `git switch branch-name`                 | Switches to another branch.                                                |
+| `git merge branch-name`                  | Combines changes from another branch into the current branch.              |
+| `git remote -v`                          | Displays configured remote repositories.                                   |
+| `git push`                               | Uploads local commits to a remote repository.                              |
+| `git pull`                               | Fetches and integrates changes from a remote repository.                   |
+| `git fetch`                              | Downloads remote updates without integrating them into the current branch. |
+| `git rm filename`                        | Removes a file and stages its deletion.                                    |
+
+## 3. Git Workflow
+
+Working Directory
+
+Create or modify files
+
+Staging Area — `git add`
+
+Select changes to save
+
+Local Repository — `git commit`
+
+Record changes locally
+
+Remote Repository — `git push`
+
+Upload commits to GitHub
+
+## 4. Important Concepts
+
+- Repository: A location where project files and their version history are stored.
+- Commit: A snapshot of staged changes.
+- Staging Area: An intermediate area where changes are selected before committing.
+- Branch: An independent line of development.
+- Merge Conflict: Occurs when Git cannot automatically reconcile conflicting changes.
+- Remote: A version of the repository hosted elsewhere, such as on GitHub.
+- HEAD: A reference to the currently checked-out commit.
+- `.gitignore`: A file that specifies which untracked files Git should ignore.
+
+## 5. Basic Command Sequence
+
+```
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin <repository-url>
+git push -u origin main
+```
+
+Remember: `add` stages changes → `commit` saves them locally → `push` uploads them.
